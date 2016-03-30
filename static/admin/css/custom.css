@@ -1,0 +1,52 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.errorlist{
+	color: #FF0000;
+	list-style-type: none;
+}
+.index h2{
+	color: #696969;
+	border-bottom: 2px #808080 solid;
+	background: #F1F1F1;
+	padding: 15px;
+	font-style: bold;
+	font-size: 2em;
+}
+
+.index .item a{
+	color: 	#778899;
+	border-bottom: 2px black dotted;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.index a:visited{
+	color: #280000;
+}
+.index .item th{
+	background-color: #A9A9A9; 
+	color: #ffffff;
+	padding: 15px;
+}
+.index .item td{
+	padding: 5px;
+}
+tr:nth-child(even) td{
+	background: #FEFEFE;
+}
+tr:nth-child(odd) td{
+	background: #F1F1F1;
+}
+.master_report th{
+	background-color: #A9A9A9; 
+	color: #ffffff;
+	padding: 15px;
+}
+
+
