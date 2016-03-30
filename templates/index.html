@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="index">
+{% if forms %}
+<h2>Select Approriate form to fill</h2>
+
+<div class="item">
+
+<table class="table table-bordered">
+	<tr>
+		<th>Form name</th>
+		<th>Form description</th>
+	</tr>
+	{% for item in forms %}
+	<tr>
+		<td><a href="master/{{item.slug}}">{{item.form_name}}</a></td>
+		<td>{{item.form_description}}</td>
+	</tr>
+	{% endfor %}
+</table>
+</div>
+{% else %}
+{{blank_query }}
+{% endif %}
+</div>
+{% endblock %}

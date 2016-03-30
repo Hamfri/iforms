@@ -1,0 +1,12 @@
+Django==1.8.5
+MySQL-python==1.2.5
+Pillow==3.1.1
+PyPDF2==1.25.1
+argparse==1.2.1
+django-admin-bootstrapped==2.5.7
+django-easy-pdf==0.1.0
+html5lib==0.9999999
+reportlab==2.7
+six==1.10.0
+wsgiref==0.1.2
+xhtml2pdf==0.0.6

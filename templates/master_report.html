@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="master_report">
+<table class="table table-bordered">
+<tr>
+	<th>Form Field</th>
+	<th>Value</th>
+</tr>
+<tr>
+{% if report.short_text1 %}
+	<td>{{report.label.short_text1}}</td>
+	<td>{{report.short_text1}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.short_text2 %}
+	<td>{{report.label.short_text2}}</td>
+	<td>{{report.short_text2}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.short_text3 %}
+	<td>{{report.label.short_text3}}</td>
+	<td>{{report.short_text3}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.short_text4 %}
+	<td>{{report.label.short_text4}}</td>
+	<td>{{report.short_text4}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.num_field1 %}
+	<td>{{report.label.num_field1}}</td>
+	<td>{{report.num_field1}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.num_field2 %}
+	<td>{{report.label.num_field2}}</td>
+	<td>{{report.num_field2}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.long_text1 %}
+	<td>{{report.label.long_text1}}</td>
+	<td>{{report.long_text1}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.long_text2 %}
+	<td>{{report.label.long_text2}}</td>
+	<td>{{report.long_text2}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.long_text3 %}
+	<td>{{report.label.long_text3}}</td>
+	<td>{{report.long_text3}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.long_text4 %}
+	<td>{{report.label.long_text4}}</td>
+	<td>{{report.long_text4}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.long_text5 %}
+	<td>{{report.label.long_text5}}</td>
+	<td>{{report.long_text5}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.date_field1%}
+	<td>{{report.label.date_field1}}</td>
+	<td>{{report.date_field1}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.date_field2%}
+	<td>{{report.label.date_field2}}</td>
+	<td>{{report.date_field2}}</td>
+{% endif %}
+</tr>
+
+<tr>
+{% if report.date_field3%}
+	<td>{{report.label.date_field3}}</td>
+	<td>{{report.date_field3}}</td>
+{% endif %}
+</tr>
+
+</table>
+</div>
+<a href="{% url "master_report_pdf" pk=report.pk%}" class="btn btn-info">Generate pdf</a>
+{% endblock %}

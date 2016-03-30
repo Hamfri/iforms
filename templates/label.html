@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="." method="POST">
+{% csrf_token %}
+{{ form.non_field_errors }}
+
+{% if form.assosiative %}
+<div class="form-group">
+	<p><small>{{form.assosiative.errors}}</small></p>
+	<label class="form-contol" for="{{form.assosiative.id_for_label}}">Form</label>
+	<div class=" ">
+		{{form.assosiative}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.form_name %}
+<div class="form-group">
+	<p><small>{{form.form_name.errors}}</small></p>
+	<label class="form-contol" for="{{form.form_name.id_for_label}}">Form name</label>
+	<div class=" ">
+		{{form.form_name}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.short_text1 %}
+<div class="form-group">
+	<p><small>{{form.short_text1.errors}}</small></p>
+	<label class="form-contol" for="{{form.short_text1.id_for_label}}">Short text 1</label>
+	<div class=" ">
+		{{form.short_text1}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.short_text2 %}
+<div class="form-group">
+	<p><small>{{form.short_text2.errors}}</small></p>
+	<label class="control-label" for="{{form.short_text2.id_for_label}}">Short text 2</label>
+	<div class=" ">
+		{{form.short_text2}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.short_text3 %}
+<div class="form-group">
+	<p><small>{{form.short_text3.errors}}</small></p>
+	<label class="control-label" for="{{form.short_text3.id_for_label}}">Short text 3</label>
+	<div class=" ">
+		{{form.short_text3}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.short_text4 %}
+<div class="form-group">
+	<p><small>{{form.short_text4.errors}}</small></p>
+	<label class="control-label" for="{{form.short_text4.id_for_label}}">Short text 4</label>
+	<div class=" ">
+		{{form.short_text4}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.num_field1 %}
+<div class="form-group">
+	<p><small>{{form.num_field1.errors}}</small></p>
+	<label class="control-label" for="{{form.num_field1.id_for_label}}">Number field 1</label>
+	<div class=" ">
+		{{form.num_field1}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.num_field2 %}
+<div class="form-group">
+	<p><small>{{form.num_field2.errors}}</small></p>
+	<label class="control-label" for="{{form.num_field2.id_for_label}}">Number field 2</label>
+	<div class=" ">
+		{{form.num_field2}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.long_text1 %}
+<div class="form-group">
+	<p><small>{{form.long_text1.errors}}</small></p>
+	<label class="control-label" for="{{form.long_text1.id_for_label}}">Long Text 1</label>
+	<div class=" ">
+		{{form.long_text1}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.long_text2 %}
+<div class="form-group">
+	<p><small>{{form.long_text2.errors}}</small></p>
+	<label class="control-label" for="{{form.long_text2.id_for_label}}">Long Text 2</label>
+	<div class=" ">
+		{{form.long_text2}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.long_text3 %}
+<div class="form-group">
+	<p><small>{{form.long_text3.errors}}</small></p>
+	<label class="control-label" for="{{form.long_text3.id_for_label}}">Long Text 3</label>
+	<div class=" ">
+		{{form.long_text3}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.long_text4 %}
+<div class="form-group">
+	<p><small>{{form.long_text4.errors}}</small></p>
+	<label class="control-label" for="{{form.long_text4.id_for_label}}">Long Text 4</label>
+	<div class=" ">
+		{{form.long_text4}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.long_text5 %}
+<div class="form-group">
+	<p><small>{{form.long_text5.errors}}</small></p>
+	<label class="control-label" for="{{form.long_text4.id_for_label}}">Long Text 5</label>
+	<div class=" ">
+		{{form.long_text5}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.date_field1 %}
+<div class="form-group">
+	<p><small>{{form.date_field1.errors}}</small></p>
+	<label class="control-label" for="{{form.date_field1.id_for_label}}">Date Field 1</label>
+	<div class=" ">
+		{{form.date_field1}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.date_field2 %}
+<div class="form-group">
+	<p><small>{{form.date_field2.errors}}</small></p>
+	<label class="control-label" for="{{form.date_field2.id_for_label}}">Date Field 2</label>
+	<div class=" ">
+		{{form.date_field2}}
+	</div>
+</div>
+{% endif %}
+
+{% if form.date_field3 %}
+<div class="form-group">
+	<p><small>{{form.date_field3.errors}}</small></p>
+	<label class="control-label" for="{{form.date_field3.id_for_label}}">Date Field 3</label>
+	<div class=" ">
+		{{form.date_field3}}
+	</div>
+</div>
+{% endif %}
+
+
+
+<input class="btn btn-info" type="submit" value="Submit"></input>
+</form>
+{% endblock %}
