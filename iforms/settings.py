@@ -16,7 +16,6 @@ PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 SITE_ROOT = os.path.dirname(PROJECT_ROOT)
 TEMPLATE_PATH = os.path.join(SITE_ROOT, 'templates')
 STATIC_PATH = os.path.join(SITE_ROOT, 'static')
-STATIC_ROOT = os.path.join(SITE_ROOT, 'static/admin')
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -44,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     #local applications
     'dyna_forms',
+    'user_accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,4 +108,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_PATH,]
-STATIC_ROOT = STATIC_ROOT
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/assets')
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'static/media/')
+MEDIA_URL = '/static/media/'
+
+

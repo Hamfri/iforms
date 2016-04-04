@@ -9,4 +9,9 @@ $(function() {
 $(function() {
     $( "#id_date_field3" ).datepicker();
   });
-
+$(function() {
+    $( "#id_date_field4" ).datepicker();
+  });
+$(function() {
+    $( "#id_date_field5" ).datepicker();
+  });

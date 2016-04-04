@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="." method="POST">
+<h2>{{associate.form_name}}</h2>
+<form action="." method="POST" enctype="multipart/form-data">
 {% csrf_token %}
 {{ form.non_field_errors }}
-
-<h2>{{associate.form_description}}</h2>
+<!--new template-->
 {% if form.label %}
 <div class="form-group">
 	<p><small>{{form.label.errors}}</small></p>
@@ -18,145 +18,754 @@
 
 {% if form.short_text1 %}
 <div class="form-group">
-	<p><small>{{form.short_text1.errors}}</small></p>
-	<label class="form-contol" for="{{form.short_text1.id_for_label}}">{{l_query.short_text1}}</label>
-	<div class=" ">
-		{{form.short_text1}}
-	</div>
+   <p><small>{{form.short_text1.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text1.id_for_label}}">{{l_query.short_text1}}</label>
+   <div class=" ">
+      {{form.short_text1}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.short_text2 %}
 <div class="form-group">
-	<p><small>{{form.short_text2.errors}}</small></p>
-	<label class="control-label" for="{{form.short_text2.id_for_label}}">{{l_query.short_text2}}</label>
-	<div class=" ">
-		{{form.short_text2}}
-	</div>
+   <p><small>{{form.short_text2.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text2.id_for_label}}">{{l_query.short_text2}}</label>
+   <div class=" ">
+      {{form.short_text2}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.short_text3 %}
 <div class="form-group">
-	<p><small>{{form.short_text3.errors}}</small></p>
-	<label class="control-label" for="{{form.short_text3.id_for_label}}">{{l_query.short_text3}}</label>
-	<div class=" ">
-		{{form.short_text3}}
-	</div>
+   <p><small>{{form.short_text3.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text3.id_for_label}}">{{l_query.short_text3}}</label>
+   <div class=" ">
+      {{form.short_text3}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.short_text4 %}
 <div class="form-group">
-	<p><small>{{form.short_text4.errors}}</small></p>
-	<label class="control-label" for="{{form.short_text4.id_for_label}}">{{l_query.short_text4}}</label>
-	<div class=" ">
-		{{form.short_text4}}
-	</div>
+   <p><small>{{form.short_text4.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text4.id_for_label}}">{{l_query.short_text4}}</label>
+   <div class=" ">
+      {{form.short_text4}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text5 %}
+<div class="form-group">
+   <p><small>{{form.short_text5.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text5.id_for_label}}">{{l_query.short_text5}}</label>
+   <div class=" ">
+      {{form.short_text5}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text6 %}
+<div class="form-group">
+   <p><small>{{form.short_text6.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text6.id_for_label}}">{{l_query.short_text6}}</label>
+   <div class=" ">
+      {{form.short_text6}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text7 %}
+<div class="form-group">
+   <p><small>{{form.short_text7.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text7.id_for_label}}">{{l_query.short_text7}}</label>
+   <div class=" ">
+      {{form.short_text7}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text8 %}
+<div class="form-group">
+   <p><small>{{form.short_text8.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text8.id_for_label}}">{{l_query.short_text8}}</label>
+   <div class=" ">
+      {{form.short_text8}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text9 %}
+<div class="form-group">
+   <p><small>{{form.short_text9.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text9.id_for_label}}">{{l_query.short_text9}}</label>
+   <div class=" ">
+      {{form.short_text9}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text10 %}
+<div class="form-group">
+   <p><small>{{form.short_text10.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text10.id_for_label}}">{{l_query.short_text10}}</label>
+   <div class=" ">
+      {{form.short_text10}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text11 %}
+<div class="form-group">
+   <p><small>{{form.short_text11.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text11.id_for_label}}">{{l_query.short_text11}}</label>
+   <div class=" ">
+      {{form.short_text11}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text12 %}
+<div class="form-group">
+   <p><small>{{form.short_text12.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text12.id_for_label}}">{{l_query.short_text12}}</label>
+   <div class=" ">
+      {{form.short_text12}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text13 %}
+<div class="form-group">
+   <p><small>{{form.short_text13.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text13.id_for_label}}">{{l_query.short_text13}}</label>
+   <div class=" ">
+      {{form.short_text13}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text14 %}
+<div class="form-group">
+   <p><small>{{form.short_text14.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text14.id_for_label}}">{{l_query.short_text14}}</label>
+   <div class=" ">
+      {{form.short_text14}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text15 %}
+<div class="form-group">
+   <p><small>{{form.short_text15.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text15.id_for_label}}">{{l_query.short_text15}}</label>
+   <div class=" ">
+      {{form.short_text15}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text16 %}
+<div class="form-group">
+   <p><small>{{form.short_text16.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text16.id_for_label}}">{{l_query.short_text16}}</label>
+   <div class=" ">
+      {{form.short_text16}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text17 %}
+<div class="form-group">
+   <p><small>{{form.short_text17.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text17.id_for_label}}">{{l_query.short_text17}}</label>
+   <div class=" ">
+      {{form.short_text17}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text18 %}
+<div class="form-group">
+   <p><small>{{form.short_text18.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text18.id_for_label}}">{{l_query.short_text18}}</label>
+   <div class=" ">
+      {{form.short_text18}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text19 %}
+<div class="form-group">
+   <p><small>{{form.short_text19.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text19.id_for_label}}">{{l_query.short_text19}}</label>
+   <div class=" ">
+      {{form.short_text19}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text20 %}
+<div class="form-group">
+   <p><small>{{form.short_text20.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text20.id_for_label}}">{{l_query.short_text20}}</label>
+   <div class=" ">
+      {{form.short_text20}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text21 %}
+<div class="form-group">
+   <p><small>{{form.short_text21.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text21.id_for_label}}">{{l_query.short_text21}}</label>
+   <div class=" ">
+      {{form.short_text21}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text22 %}
+<div class="form-group">
+   <p><small>{{form.short_text22.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text22.id_for_label}}">{{l_query.short_text22}}</label>
+   <div class=" ">
+      {{form.short_text22}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text23 %}
+<div class="form-group">
+   <p><small>{{form.short_text23.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text23.id_for_label}}">{{l_query.short_text23}}</label>
+   <div class=" ">
+      {{form.short_text23}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text24 %}
+<div class="form-group">
+   <p><small>{{form.short_text24.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text24.id_for_label}}">{{l_query.short_text24}}</label>
+   <div class=" ">
+      {{form.short_text24}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text25 %}
+<div class="form-group">
+   <p><small>{{form.short_text25.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text25.id_for_label}}">{{l_query.short_text25}}</label>
+   <div class=" ">
+      {{form.short_text25}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text26 %}
+<div class="form-group">
+   <p><small>{{form.short_text26.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text26.id_for_label}}">{{l_query.short_text26}}</label>
+   <div class=" ">
+      {{form.short_text26}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text27 %}
+<div class="form-group">
+   <p><small>{{form.short_text27.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text27.id_for_label}}">{{l_query.short_text27}}</label>
+   <div class=" ">
+      {{form.short_text27}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text28 %}
+<div class="form-group">
+   <p><small>{{form.short_text28.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text28.id_for_label}}">{{l_query.short_text28}}</label>
+   <div class=" ">
+      {{form.short_text28}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text29 %}
+<div class="form-group">
+   <p><small>{{form.short_text29.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text29.id_for_label}}">{{l_query.short_text29}}</label>
+   <div class=" ">
+      {{form.short_text29}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text30 %}
+<div class="form-group">
+   <p><small>{{form.short_text30.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text30.id_for_label}}">{{l_query.short_text30}}</label>
+   <div class=" ">
+      {{form.short_text30}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text31 %}
+<div class="form-group">
+   <p><small>{{form.short_text31.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text31.id_for_label}}">{{l_query.short_text31}}</label>
+   <div class=" ">
+      {{form.short_text31}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text32 %}
+<div class="form-group">
+   <p><small>{{form.short_text32.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text32.id_for_label}}">{{l_query.short_text32}}</label>
+   <div class=" ">
+      {{form.short_text32}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text33 %}
+<div class="form-group">
+   <p><small>{{form.short_text33.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text33.id_for_label}}">{{l_query.short_text33}}</label>
+   <div class=" ">
+      {{form.short_text33}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text34 %}
+<div class="form-group">
+   <p><small>{{form.short_text34.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text34.id_for_label}}">{{l_query.short_text34}}</label>
+   <div class=" ">
+      {{form.short_text34}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text35 %}
+<div class="form-group">
+   <p><small>{{form.short_text35.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text35.id_for_label}}">{{l_query.short_text35}}</label>
+   <div class=" ">
+      {{form.short_text35}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text36 %}
+<div class="form-group">
+   <p><small>{{form.short_text36.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text36.id_for_label}}">{{l_query.short_text36}}</label>
+   <div class=" ">
+      {{form.short_text36}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text37 %}
+<div class="form-group">
+   <p><small>{{form.short_text37.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text37.id_for_label}}">{{l_query.short_text37}}</label>
+   <div class=" ">
+      {{form.short_text37}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text38 %}
+<div class="form-group">
+   <p><small>{{form.short_text38.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text38.id_for_label}}">{{l_query.short_text38}}</label>
+   <div class=" ">
+      {{form.short_text38}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text39 %}
+<div class="form-group">
+   <p><small>{{form.short_text39.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text39.id_for_label}}">{{l_query.short_text39}}</label>
+   <div class=" ">
+      {{form.short_text39}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.short_text40 %}
+<div class="form-group">
+   <p><small>{{form.short_text40.errors}}</small></p>
+   <label class="form-contol" for="{{form.short_text40.id_for_label}}">{{l_query.short_text40}}</label>
+   <div class=" ">
+      {{form.short_text40}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.num_field1 %}
 <div class="form-group">
-	<p><small>{{form.num_field1.errors}}</small></p>
-	<label class="control-label" for="{{form.num_field1.id_for_label}}">{{l_query.num_field1}}</label>
-	<div class=" ">
-		{{form.num_field1}}
-	</div>
+   <p><small>{{form.num_field1.errors}}</small></p>
+   <label class="form-contol" for="{{form.num_field1.id_for_label}}">{{l_query.num_field1}}</label>
+   <div class=" ">
+      {{form.num_field1}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.num_field2 %}
 <div class="form-group">
-	<p><small>{{form.num_field2.errors}}</small></p>
-	<label class="control-label" for="{{form.num_field2.id_for_label}}">{{l_query.num_field2}}</label>
-	<div class=" ">
-		{{form.num_field2}}
-	</div>
+   <p><small>{{form.num_field2.errors}}</small></p>
+   <label class="form-contol" for="{{form.num_field2.id_for_label}}">{{l_query.num_field2}}</label>
+   <div class=" ">
+      {{form.num_field2}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.num_field3 %}
+<div class="form-group">
+   <p><small>{{form.num_field3.errors}}</small></p>
+   <label class="form-contol" for="{{form.num_field3.id_for_label}}">{{l_query.num_field3}}</label>
+   <div class=" ">
+      {{form.num_field3}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.num_field4 %}
+<div class="form-group">
+   <p><small>{{form.num_field4.errors}}</small></p>
+   <label class="form-contol" for="{{form.num_field4.id_for_label}}">{{l_query.num_field4}}</label>
+   <div class=" ">
+      {{form.num_field4}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.num_field5 %}
+<div class="form-group">
+   <p><small>{{form.num_field5.errors}}</small></p>
+   <label class="form-contol" for="{{form.num_field5.id_for_label}}">{{l_query.num_field5}}</label>
+   <div class=" ">
+      {{form.num_field5}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.long_text1 %}
 <div class="form-group">
-	<p><small>{{form.long_text1.errors}}</small></p>
-	<label class="control-label" for="{{form.long_text1.id_for_label}}">{{l_query.long_text1}}</label>
-	<div class=" ">
-		{{form.long_text1}}
-	</div>
+   <p><small>{{form.long_text1.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text1.id_for_label}}">{{l_query.long_text1}}</label>
+   <div class=" ">
+      {{form.long_text1}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.long_text2 %}
 <div class="form-group">
-	<p><small>{{form.long_text2.errors}}</small></p>
-	<label class="control-label" for="{{form.long_text2.id_for_label}}">{{l_query.long_text2}}</label>
-	<div class=" ">
-		{{form.long_text2}}
-	</div>
+   <p><small>{{form.long_text2.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text2.id_for_label}}">{{l_query.long_text2}}</label>
+   <div class=" ">
+      {{form.long_text2}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.long_text3 %}
 <div class="form-group">
-	<p><small>{{form.long_text3.errors}}</small></p>
-	<label class="control-label" for="{{form.long_text3.id_for_label}}">{{l_query.long_text3}}</label>
-	<div class=" ">
-		{{form.long_text3}}
-	</div>
+   <p><small>{{form.long_text3.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text3.id_for_label}}">{{l_query.long_text3}}</label>
+   <div class=" ">
+      {{form.long_text3}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.long_text4 %}
 <div class="form-group">
-	<p><small>{{form.long_text4.errors}}</small></p>
-	<label class="control-label" for="{{form.long_text4.id_for_label}}">{{l_query.long_text4}}</label>
-	<div class=" ">
-		{{form.long_text4}}
-	</div>
+   <p><small>{{form.long_text4.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text4.id_for_label}}">{{l_query.long_text4}}</label>
+   <div class=" ">
+      {{form.long_text4}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.long_text5 %}
 <div class="form-group">
-	<p><small>{{form.long_text5.errors}}</small></p>
-	<label class="control-label" for="{{form.long_text4.id_for_label}}">{{l_query.long_text5}}</label>
-	<div class=" ">
-		{{form.long_text5}}
-	</div>
+   <p><small>{{form.long_text5.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text5.id_for_label}}">{{l_query.long_text5}}</label>
+   <div class=" ">
+      {{form.long_text5}}
+   </div>
 </div>
 {% endif %}
 
+{% if form.long_text6 %}
+<div class="form-group">
+   <p><small>{{form.long_text6.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text6.id_for_label}}">{{l_query.long_text6}}</label>
+   <div class=" ">
+      {{form.long_text6}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text7 %}
+<div class="form-group">
+   <p><small>{{form.long_text7.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text7.id_for_label}}">{{l_query.long_text7}}</label>
+   <div class=" ">
+      {{form.long_text7}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text8 %}
+<div class="form-group">
+   <p><small>{{form.long_text8.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text8.id_for_label}}">{{l_query.long_text8}}</label>
+   <div class=" ">
+      {{form.long_text8}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text9 %}
+<div class="form-group">
+   <p><small>{{form.long_text9.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text9.id_for_label}}">{{l_query.long_text9}}</label>
+   <div class=" ">
+      {{form.long_text9}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text10 %}
+<div class="form-group">
+   <p><small>{{form.long_text10.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text10.id_for_label}}">{{l_query.long_text10}}</label>
+   <div class=" ">
+      {{form.long_text10}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text11 %}
+<div class="form-group">
+   <p><small>{{form.long_text11.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text11.id_for_label}}">{{l_query.long_text11}}</label>
+   <div class=" ">
+      {{form.long_text11}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text12 %}
+<div class="form-group">
+   <p><small>{{form.long_text12.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text12.id_for_label}}">{{l_query.long_text12}}</label>
+   <div class=" ">
+      {{form.long_text12}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text13 %}
+<div class="form-group">
+   <p><small>{{form.long_text13.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text13.id_for_label}}">{{l_query.long_text13}}</label>
+   <div class=" ">
+      {{form.long_text13}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text14 %}
+<div class="form-group">
+   <p><small>{{form.long_text14.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text14.id_for_label}}">{{l_query.long_text14}}</label>
+   <div class=" ">
+      {{form.long_text14}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text15 %}
+<div class="form-group">
+   <p><small>{{form.long_text15.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text15.id_for_label}}">{{l_query.long_text15}}</label>
+   <div class=" ">
+      {{form.long_text15}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text16 %}
+<div class="form-group">
+   <p><small>{{form.long_text16.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text16.id_for_label}}">{{l_query.long_text16}}</label>
+   <div class=" ">
+      {{form.long_text16}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text17 %}
+<div class="form-group">
+   <p><small>{{form.long_text17.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text17.id_for_label}}">{{l_query.long_text17}}</label>
+   <div class=" ">
+      {{form.long_text17}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text18 %}
+<div class="form-group">
+   <p><small>{{form.long_text18.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text18.id_for_label}}">{{l_query.long_text18}}</label>
+   <div class=" ">
+      {{form.long_text18}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text19 %}
+<div class="form-group">
+   <p><small>{{form.long_text19.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text19.id_for_label}}">{{l_query.long_text19}}</label>
+   <div class=" ">
+      {{form.long_text19}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.long_text20 %}
+<div class="form-group">
+   <p><small>{{form.long_text20.errors}}</small></p>
+   <label class="form-contol" for="{{form.long_text20.id_for_label}}">{{l_query.long_text20}}</label>
+   <div class=" ">
+      {{form.long_text20}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.image_field1 %}
+<div class="form-group">
+   <p><small>{{form.image_field1.errors}}</small></p>
+   <label class="form-contol" for="{{form.image_field1.id_for_label}}">{{l_query.image_field1}}</label>
+   <div class=" ">
+      {{form.image_field1}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.image_field2 %}
+<div class="form-group">
+   <p><small>{{form.image_field2.errors}}</small></p>
+   <label class="form-contol" for="{{form.image_field2.id_for_label}}">{{l_query.image_field2}}</label>
+   <div class=" ">
+      {{form.image_field2}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.image_field3 %}
+<div class="form-group">
+   <p><small>{{form.image_field3.errors}}</small></p>
+   <label class="form-contol" for="{{form.image_field3.id_for_label}}">{{l_query.image_field3}}</label>
+   <div class=" ">
+      {{form.image_field3}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.image_field4 %}
+<div class="form-group">
+   <p><small>{{form.image_field4.errors}}</small></p>
+   <label class="form-contol" for="{{form.image_field4.id_for_label}}">{{l_query.image_field4}}</label>
+   <div class=" ">
+      {{form.image_field4}}
+   </div>
+</div>
+{% endif %}
+
+{% if form.image_field5 %}
+<div class="form-group">
+   <p><small>{{form.image_field5.errors}}</small></p>
+   <label class="form-contol" for="{{form.image_field5.id_for_label}}">{{l_query.image_field5}}</label>
+   <div class=" ">
+      {{form.image_field5}}
+   </div>
+</div>
+{% endif %}
 {% if form.date_field1 %}
 <div class="form-group">
-	<p><small>{{form.date_field1.errors}}</small></p>
-	<label class="control-label" for="{{form.date_field1.id_for_label}}">{{l_query.date_field1}}</label>
-	<div class=" ">
-		{{form.date_field1}}
-	</div>
+   <p><small>{{form.date_field1.errors}}</small></p>
+   <label class="form-contol" for="{{form.date_field1.id_for_label}}">{{l_query.date_field1}}</label>
+   <div class=" ">
+      {{form.date_field1}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.date_field2 %}
 <div class="form-group">
-	<p><small>{{form.date_field2.errors}}</small></p>
-	<label class="control-label" for="{{form.date_field2.id_for_label}}">{{l_query.date_field2}}</label>
-	<div class=" ">
-		{{form.date_field2}}
-	</div>
+   <p><small>{{form.date_field2.errors}}</small></p>
+   <label class="form-contol" for="{{form.date_field2.id_for_label}}">{{l_query.date_field2}}</label>
+   <div class=" ">
+      {{form.date_field2}}
+   </div>
 </div>
 {% endif %}
 
 {% if form.date_field3 %}
 <div class="form-group">
-	<p><small>{{form.date_field3.errors}}</small></p>
-	<label class="control-label" for="{{form.date_field3.id_for_label}}">{{l_query.date_field3}}</label>
-	<div class=" ">
-		{{form.date_field3}}
-	</div>
+   <p><small>{{form.date_field3.errors}}</small></p>
+   <label class="form-contol" for="{{form.date_field3.id_for_label}}">{{l_query.date_field3}}</label>
+   <div class=" ">
+      {{form.date_field3}}
+   </div>
 </div>
 {% endif %}
 
+{% if form.date_field4 %}
+<div class="form-group">
+   <p><small>{{form.date_field4.errors}}</small></p>
+   <label class="form-contol" for="{{form.date_field4.id_for_label}}">{{l_query.date_field4}}</label>
+   <div class=" ">
+      {{form.date_field4}}
+   </div>
+</div>
+{% endif %}
 
+{% if form.date_field5 %}
+<div class="form-group">
+   <p><small>{{form.date_field5.errors}}</small></p>
+   <label class="form-contol" for="{{form.date_field5.id_for_label}}">{{l_query.date_field5}}</label>
+   <div class=" ">
+      {{form.date_field5}}
+   </div>
+</div>
+{% endif %}
+
+<!--end of new template-->
 
 <input class="btn btn-info btn-block" type="submit" value="Submit"></input>
 </form>

@@ -1,0 +1,31 @@
+{% extends 'accounts_base.html' %}
+
+{% block content %}
+<form action="." method="POST">
+{% csrf_token %}
+<div class="register">
+<div class="inner">
+<h2>Please Signup to access Forms</h2>
+	<div class="fieldWrapper">
+		{{ form.username.errors }}
+		<label for="{{ form.username.id_for_label}}">Username:</label>
+		{{form.username}}
+	</div>
+
+	<div class="fieldWrapper">
+		{{ form.email.errors }}
+		<label for="{{ form.email.id_for_label}}">Email:</label>
+		{{form.email}}
+	</div>
+
+	<div class="pass2">
+		{{ form.password.errors }}
+		<label for="{{ form.password.id_for_label}}">Password(Again):</label>
+		{{form.password}}
+	</div>
+
+<input class="btn btn-info" type="submit" value="Submit"></input>
+</div>
+</div>
+</form>
+{% endblock %}

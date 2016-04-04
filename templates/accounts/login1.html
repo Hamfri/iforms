@@ -1,0 +1,28 @@
+{% extends 'accounts_base.html' %}
+
+{% block content %}
+<form action="." method="POST">
+{% csrf_token %}
+<div class="login">
+<div class="inner">
+
+<h2>Please login to access Forms</h2>
+	<div class="fieldWrapper">
+		{{ form.email.errors }}
+		<label for="{{ form.email.id_for_label}}">Email:</label>
+		{{form.email}}
+	</div>
+
+	<div class="pass">
+		{{ form.password.errors }}
+		<label for="{{ form.password.id_for_label}}">Password:</label>
+		{{form.password}}
+	</div>
+	<input class="btn btn-success" type="submit" value="Login"></input>
+    <p><em>Need an account? </em><a href="/accounts/register"><em>Signup</em></a><span>  or signin as <a href="/admin">Admin</a></span></p>
+</div>
+</div>
+
+</form>
+
+{% endblock %}

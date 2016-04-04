@@ -48,5 +48,30 @@ tr:nth-child(odd) td{
 	color: #ffffff;
 	padding: 15px;
 }
-
-
+.register, .login{
+	width: 500px;
+	margin-left: 20em;
+	border: 2px #808080 solid;
+	border-radius: 8px;
+}
+.register .inner, .login .inner{
+	margin-right: 2em;
+	margin-left: 2em;
+}
+.inner .pass2{
+	margin-bottom: 10px; 
+}
+.register .btn, .login .btn{
+	margin-bottom: 10px;
+}
+.register .inner h2, .login .inner h2{
+	border-bottom: 2px #778899 solid;
+	color: #708090;
+}
+#navbar .user2{
+	margin-left: 47em;
+}
+#navbar .user1{
+	margin-left: 40em;
+}
+*/
