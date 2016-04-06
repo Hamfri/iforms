@@ -1,15 +1,18 @@
 from django import forms
 from django.shortcuts import get_object_or_404
-from .models import Master, Label, Assosiative, Contact
+from .models import Master, Label, Assosiative, Contact, Project
            
 def get_form_class(associate, *args, **kwargs):
     class MasterForm(forms.ModelForm):
         def __init__(self, *args, **kwargs):
             super(MasterForm,self).__init__(*args, **kwargs)
+            self.fields['project_name'] = forms.ChoiceField(choices=[(item.id, str(item)) for item in Project.objects.all()], widget=forms.Select(attrs={'class':'form-control'}))
+
         class Meta:
             model = Master
             fields = []
             fields.append('label')
+            fields.append('project_name')
             if associate.short_text1 == 1:
                 fields.append('short_text1')
             if associate.short_text2 == 1:
@@ -90,6 +93,46 @@ def get_form_class(associate, *args, **kwargs):
                 fields.append('short_text39')
             if associate.short_text40 == 1:
                 fields.append('short_text40')
+            if associate.short_text41 == 1:
+                fields.append('short_text41')
+            if associate.short_text42 == 1:
+                fields.append('short_text42')
+            if associate.short_text43 == 1:
+                fields.append('short_text43')
+            if associate.short_text44 == 1:
+                fields.append('short_text44')
+            if associate.short_text45 == 1:
+                fields.append('short_text45')
+            if associate.short_text46 == 1:
+                fields.append('short_text46')
+            if associate.short_text47 == 1:
+                fields.append('short_text47')
+            if associate.short_text48 == 1:
+                fields.append('short_text48')
+            if associate.short_text49 == 1:
+                fields.append('short_text49')
+            if associate.short_text50 == 1:
+                fields.append('short_text50')
+            if associate.short_text51 == 1:
+                fields.append('short_text51')
+            if associate.short_text52 == 1:
+                fields.append('short_text52')
+            if associate.short_text53 == 1:
+                fields.append('short_text53')
+            if associate.short_text54 == 1:
+                fields.append('short_text54')
+            if associate.short_text55 == 1:
+                fields.append('short_text55')
+            if associate.short_text56 == 1:
+                fields.append('short_text56')
+            if associate.short_text57 == 1:
+                fields.append('short_text57')
+            if associate.short_text58 == 1:
+                fields.append('short_text58')
+            if associate.short_text59 == 1:
+                fields.append('short_text59')
+            if associate.short_text60 == 1:
+                fields.append('short_text60')
             if associate.num_field1 == 1:
                 fields.append('num_field1')
             if associate.num_field2 == 1:
@@ -170,7 +213,7 @@ def get_form_class(associate, *args, **kwargs):
                 fields.append('date_field4')
             if associate.date_field5 == 1:
                 fields.append('date_field5')
-                
+        
     return MasterForm
 
 def get_field_label(l_asso, *args, **kwargs):

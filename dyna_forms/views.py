@@ -45,13 +45,16 @@ def render_to_pdf(template_src, context_dict):
 def index(request):
     forms = Assosiative.objects.all()
     if len(forms) == 0:
-        messages.add_message(request, messages.INFO, 'No forms are added currently, Contact Admin')
+        messages.add_message(request, messages.WARNING, 'No forms are added currently, Contact Admin')
     return render(request, 'index.html', locals())
 
 @login_required
 def master_reports(request, pk):
     report = get_object_or_404(Master, pk=pk)
     return render(request, 'master_report.html', {'report':report})
+
+def my_forms(request):
+    my_forms = Label.objects.get(assosiative__pk=form_name)
 
 ######## pending for edits####################
 def master_report_edit(request,slug):
@@ -76,8 +79,8 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save(commit=True)
-            messages.add_message(request, messages.INFO, 'Your message has been sent Successfully'
-                                 )
+            messages.add_message(request, messages.SUCCESS, 'Your message has been sent Successfully'
+                       )
             return HttpResponseRedirect('/')
         else:
             print form.errors
@@ -103,6 +106,11 @@ def master(request,slug):
               'short_text29', 'short_text30', 'short_text31', 'short_text32',
               'short_text33', 'short_text34', 'short_text35', 'short_text36',
               'short_text37', 'short_text38', 'short_text39', 'short_text40',
+              'short_text41', 'short_text42', 'short_text43', 'short_text44',
+              'short_text45', 'short_text46', 'short_text47', 'short_text48',
+              'short_text49', 'short_text50', 'short_text51', 'short_text52',
+              'short_text53', 'short_text54', 'short_text55', 'short_text56',
+              'short_text57', 'short_text58', 'short_text59', 'short_text60',
               'num_field1', 'num_field2', 'num_field3', 'num_field4', 'num_field5',
               'num_field6', 'num_field7', 'num_field8', 'num_field9', 'num_field10',
               'long_text1', 'long_text2', 'long_text3', 'long_text4', 'long_text5',
@@ -113,24 +121,27 @@ def master(request,slug):
               'date_field1', 'date_field2', 'date_field3', 'date_field4', 'date_field5'
               ]
 
-    #fields = ['short_text1', 'short_text2', 'short_text3', 'short_text4', 'num_field1', 'num_field2', 'long_text1',
-    #          'long_text1','long_text2','long_text3','long_text4','long_text5','date_field1','date_field2','date_field3']
+    
     associate = get_object_or_404(Assosiative, slug=slug)
     MasterForm = get_form_class(associate)
     #######Logic for rendering field labels#######
     form_name = associate.pk
     #l_query = Label.objects.get(assosiative__form_name=form_name).values('assosiative__form_name')
     l_query = Label.objects.get(assosiative__pk=form_name)
-    form = MasterForm(request.POST, request.FILES or None)
-    if form.is_valid():
-        post = form.save(commit=False)
-        post.save()
-        messages.add_message(request, messages.INFO, 'Your Form has been posted successfully'
+    if request.method=="POST":
+        form = MasterForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.posted_by = request.user
+            post.save()
+            messages.add_message(request, messages.SUCCESS, 'Your Form has been posted successfully'
                                 )
-        return redirect('dyna_forms.views.master_reports', pk=post.pk)
+            return redirect('dyna_forms.views.master_reports', pk=post.pk)
         #return redirect('form_gen.views.query_doc', pk=post.pk)
+        else:
+            print form.errors
     else:
-        print form.errors
+        form = MasterForm()
     for key in form.fields.keys():
         if key in fields:
             field = form.fields[key]

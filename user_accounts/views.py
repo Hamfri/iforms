@@ -15,6 +15,8 @@ def register(request):
             user = user_form.save()
             user.set_password(user.password)
             user.save()
+            messages.add_message(request, messages.INFO, 'Signup successful')
+            return redirect('user_accounts:login')
         else:
             print user_form.errors
     else:
@@ -36,15 +38,15 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
+                messages.add_message(request, messages.INFO, 'Login successful')
                 return HttpResponseRedirect('/')
             else:
-                messages.add_message(request, messages.INFO, 'Your account is disabled')
+                messages.add_message(request, messages.WARNING, 'Your account is disabled')
         else:
             print "Invalid login details: {0}, {1}".format(username,password)
-            messages.add_message(request, messages.INFO, 'Invalid login details')
+            messages.add_message(request, messages.WARNING, 'Invalid login details')
             return redirect("user_accounts:login")
-    else:
-        return render(request, 'accounts/login.html', locals())
+    return render(request, 'accounts/login.html', locals())
     
 @login_required
 def user_logout(request):

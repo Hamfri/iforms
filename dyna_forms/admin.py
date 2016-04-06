@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Master, Label, Assosiative, Contact
+from .models import Master, Label, Assosiative, Contact, Project
 from .forms import get_field_label
 
 class ContactAdmin(admin.ModelAdmin):
@@ -29,6 +29,11 @@ class AssociativeAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':['form_name']}
     class Meta:
         model = Assosiative
-        
 admin.site.register(Assosiative, AssociativeAdmin)
+
+class ProjectAdmin(admin.ModelAdmin):
+    class Meta:
+        model = Project
+admin.site.register(Project, ProjectAdmin)
+
 admin.site.site_header = 'i-Form admin'
